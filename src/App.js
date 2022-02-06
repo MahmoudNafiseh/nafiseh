@@ -118,7 +118,6 @@ function App() {
             opacity: 0,
             duration: 1200,
             easing: 'easeInExpo',
-            delay: 1000,
          });
    }, [beginTextWidth, gradTextHeight]);
    return (
