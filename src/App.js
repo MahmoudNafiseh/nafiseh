@@ -10,6 +10,7 @@ function App() {
    const [beginTextHeight, setBeginTextHeight] = useState(0);
    const [gradTextWidth, setGradTextWidth] = useState(0);
    const [gradTextHeight, setGradTextHeight] = useState(0);
+   const [burgerOpen, setBurgerOpen] = useState(false);
    useEffect(() => {
       setBeginTextWidth(beginText.current.offsetWidth);
       setBeginTextHeight(beginText.current.offsetHeight);
@@ -52,12 +53,12 @@ function App() {
          .add({
             targets: '.creative-text-overlay',
             height: gradTextHeight,
-            width: [
-               beginTextWidth + 10,
-               beginTextWidth + 10,
-               gradTextWidth,
-               gradTextWidth,
-            ],
+            // width: [
+            //    beginTextWidth + 10,
+            //    beginTextWidth + 10,
+            //    gradTextWidth,
+            //    gradTextWidth,
+            // ],
             duration: 1000,
             delay: 3000,
             direction: 'normal',
@@ -126,8 +127,22 @@ function App() {
             <div className='logo-container'>
                <Logo />
             </div>
+            <div className='navigation-components'>
+               {/* <h1>
+                  work <span style={{ fontSize: 16 }}>-</span> resume{' '}
+                  <span style={{ fontSize: 16 }}>- </span>contact
+               </h1> */}
+               <button className='nav-button'>Work</button>
+               <button className='nav-button'>Resume</button>
+               <button className='nav-button'>Contact</button>
+            </div>
+            <div className='burger-menu-container'>
+               <button
+                  className={burgerOpen ? 'burger-menu active' : 'burger-menu'}
+                  onClick={() => setBurgerOpen(!burgerOpen)}
+               ></button>
+            </div>
          </div>
-
          <section className='hero'>
             <div className='header'>
                <h1
@@ -148,17 +163,15 @@ function App() {
                >
                   Meet your next
                </h1>
-
                <h1 className='hero2'>
                   <div className='texts-container texts-container-overlay'>
                      <span
-                        style={{ height: 0, width: beginTextWidth + 10 }}
+                        style={{ height: 0, width: gradTextWidth }}
                         className='creative-text-overlay text1'
                      >
                         Front-End Developer
                      </span>
                   </div>
-
                   <div style={{ opacity: 0 }} className='texts-container'>
                      <span ref={gradText} className='creative-text text1'>
                         Front-End Developer
