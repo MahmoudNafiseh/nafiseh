@@ -135,11 +135,28 @@ function App() {
                <button className='nav-button'>Resume</button>
                <button className='nav-button'>Contact</button>
             </div>
-            <div className='burger-menu-container'>
-               <button
-                  className={burgerOpen ? 'burger-menu active' : 'burger-menu'}
+            <div
+               className={
+                  burgerOpen
+                     ? 'burger-menu-container container-active'
+                     : 'burger-menu-container'
+               }
+            >
+               <span
                   onClick={() => setBurgerOpen(!burgerOpen)}
-               ></button>
+                  className='burger-click'
+               >
+                  <button
+                     className={
+                        burgerOpen ? 'burger-menu active' : 'burger-menu'
+                     }
+                  ></button>
+               </span>
+               <ul className='nav-list'>
+                  <li>Work</li>
+                  <li>Resume</li>
+                  <li>Contact</li>
+               </ul>
             </div>
          </div>
          <section className='hero'>

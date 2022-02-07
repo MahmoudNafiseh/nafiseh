@@ -1,0 +1,217 @@
+.App {
+   text-align: center;
+   height: 100vh;
+}
+.hero h1 .creative-text {
+   animation: flow 10s ease-in-out infinite;
+
+   background: linear-gradient(
+         120deg,
+         #d66761 16.66666%,
+         #f5c0b2 33.33333%,
+         #aee8fa 50%,
+         #68bde7 66.66666%,
+         #6bd490 83.33333%,
+         #a2f6cf
+      ),
+      linear-gradient(
+         90deg,
+         #d66761 16.66666%,
+         #f5c0b2 33.33333%,
+         #aee8fa 50%,
+         #68bde7 66.66666%,
+         #6bd490 83.33333%,
+         #a2f6cf
+      );
+   background-size: 400%;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+}
+.hero h1 .creative-text-overlay {
+   animation: flow 10s ease-in-out infinite;
+
+   background: linear-gradient(
+         120deg,
+         #d66761 16.66666%,
+         #f5c0b2 33.33333%,
+         #aee8fa 50%,
+         #68bde7 66.66666%,
+         #6bd490 83.33333%,
+         #a2f6cf
+      ),
+      linear-gradient(
+         90deg,
+         #d66761 16.66666%,
+         #f5c0b2 33.33333%,
+         #aee8fa 50%,
+         #68bde7 66.66666%,
+         #6bd490 83.33333%,
+         #a2f6cf
+      );
+   background-size: 400%;
+   /* -webkit-background-clip: text; */
+   -webkit-text-fill-color: transparent;
+   /* background-clip: text; */
+}
+@keyframes flow {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
+
+.hero h1 {
+   color: #fff;
+   font-family: Articulat CF, system-ui, sans-serif;
+   font-size: 96px;
+   font-size: 6vw;
+   font-weight: 700;
+   letter-spacing: -1px;
+   line-height: 1.2;
+   margin-top: -0.8em;
+   /* max-width: 850px; */
+   text-align: center;
+   z-index: 1;
+}
+.hero {
+   height: 90%;
+}
+.header {
+   display: flex;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.text1,
+.text2,
+.text3 {
+   position: absolute;
+   /* opacity: 0; */
+}
+.other {
+   height: 40%;
+   display: flex;
+}
+.words-container {
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+   flex: 1;
+}
+.texts-container {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+}
+.dev-container {
+   display: flex;
+   justify-content: center;
+   margin-left: 70%;
+   width: 100%;
+}
+.nav {
+   color: white;
+   width: 100%;
+   height: 10%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+}
+.logo {
+   width: 100%;
+   height: 100%;
+}
+.logo-container {
+   left: 0;
+   cursor: pointer;
+}
+.logo-container:hover {
+   color: #ed0026;
+   text-shadow: 0px 0px 5px #ed0026;
+}
+
+.navigation-components {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+}
+
+.nav-button {
+   height: 6vh;
+   width: 9vw;
+   border: none;
+   color: white;
+   background-color: black;
+   border-radius: 8px;
+   font-size: 1rem;
+   right: 1rem;
+   margin-right: 1vw;
+   text-align: center;
+}
+.nav-button:hover {
+   background-color: hsla(0, 0%, 98%, 0.1);
+}
+
+.nav-list {
+   position: absolute;
+   list-style: none;
+   margin-top: 9.5rem;
+   margin-right: 4.5rem;
+   display: flex;
+   height: 7rem;
+   width: 7rem;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   opacity: 0;
+   transition: opacity 100ms linear;
+}
+.burger-menu {
+   display: none;
+   outline: none;
+   height: 20px;
+   width: 20px;
+   border: 0px;
+   padding: 0px;
+   background: transparent;
+   transition: all 250ms ease-out;
+   cursor: pointer;
+}
+
+.burger-menu:before,
+.burger-menu:after {
+   content: '';
+   width: 1.5rem;
+   height: 0.15rem;
+   position: absolute;
+   background: white;
+   transition: all 250ms ease-out;
+   will-change: transform;
+   /* margin-left: 1rem; */
+   /* right: 2rem; */
+}
+
+.burger-menu:before {
+   transform: translateY(-3px);
+}
+
+.burger-menu:after {
+   transform: translateY(3px);
+}
+.active.burger-menu:before {
+   transform: translateY(0) rotate(45deg);
+}
+
+.active.burger-menu:after {
+   transform: translateY(0) rotate(-45deg);
+}
